@@ -1,0 +1,9 @@
+services:
+  web:
+    build: .
+    container_name: mojeapp-web
+    ports:
+      - "5052:5052"
+    environment:
+      - FLASK_PORT=5052
+    restart: unless-stopped
